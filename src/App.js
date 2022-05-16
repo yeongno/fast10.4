@@ -1,11 +1,11 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Links from "./components/Links";
 import NavLinks from "./components/NavLinks";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
-import NotFound from "./pages/NotFound";
+// import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 
 function App() {
@@ -19,7 +19,8 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/about" element={<About />} />
-        <Route path="/*" element={<NotFound />} />
+        {/* <Route path="/*" element={<NotFound />} /> */}
+        <Route path="/*" element={<Navigate to="/" replace={true} />} />
       </Routes>
     </BrowserRouter>
   );
