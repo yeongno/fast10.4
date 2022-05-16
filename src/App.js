@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Links from "./components/Links";
+import NavLinks from "./components/NavLinks";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
@@ -10,6 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Links />
+      <NavLinks />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
